@@ -8,10 +8,9 @@ output: .word32 0:10
   daddi r2, r0, 0; contador i
   daddi r5, r0, 10; limite de i
   daddi r8, r0, 2; constante de mult
-  daddi r9, r0, 8; constante de size
   daddi r10, r0, 0; i * size
   WHIL:	slt r6, r2, r5
-    dmul r10, r2, r9
+    daddi r10, r10, 8; constante de size
     beqz r6, ENDW ; brincar si i == 10
     daddi r3, r0, 0; contador j
     daddi r4, r0, 1 ; contador res
